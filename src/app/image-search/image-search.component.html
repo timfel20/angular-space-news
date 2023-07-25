@@ -1,0 +1,12 @@
+<div class="image-gallery">
+    <input type="text" [(ngModel)]="query" placeholder="Enter search query">
+    <button (click)="searchImages()">Search Images</button>
+  </div>
+  <div class="image-gallery">
+    <div *ngIf="images">
+      <div *ngFor="let image of images">
+        <img [src]="image.links[0].href" alt="{{ image.data[0].title }}">
+      </div>
+    </div>
+  </div>
+  

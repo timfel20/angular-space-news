@@ -1,8 +1,26 @@
 <div *ngIf="newsArticle">
-    <h2>{{ newsArticle.title }}</h2>
-    <p>{{ newsArticle.publishedAt | date }}</p>
-    <p>{{ newsArticle.summary }}</p>
-    <p>{{ newsArticle.newsSite }}</p>
-    <a href="{{ newsArticle.url }}" target="_blank">Read more</a>
+  <h2>{{ newsArticle.title }}</h2>
+  <p>{{ newsArticle.publishedAt | date }}</p>
+  <p>{{ newsArticle.summary }}</p>
+  <p>Source: {{ newsArticle.newsSite }}</p>
+  <a href="{{ newsArticle.url }}" target="_blank">Read more</a>
+
+  <img *ngIf="newsArticle.imageUrl" [src]="newsArticle.imageUrl" alt="News Image">
+
+  <div *ngIf="newsArticle.content">
+    <h3>Full Article</h3>
+    <div [innerHTML]="newsArticle.content"></div>
   </div>
-  
+
+  <div *ngIf="newsArticle.author">
+    <p>Author: {{ newsArticle.author }}</p>
+  </div>
+
+  <div *ngIf="newsArticle.category">
+    <p>Category: {{ newsArticle.category }}</p>
+  </div>
+
+  <div *ngIf="newsArticle.tags && newsArticle.tags.length > 0">
+    <p>Tags: {{ newsArticle.tags.join(', ') }}</p>
+  </div>
+</div>

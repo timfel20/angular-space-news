@@ -1,12 +1,31 @@
-<div class="image-gallery">
-    <input type="text" [(ngModel)]="query" placeholder="Enter search query">
-    <button (click)="searchImages()">Search Images</button>
-  </div>
+<h2>Explorar el Archivo de Imágenes de la NASA</h2>
+<div class="search-gallery-container">
+    <input type="text" [(ngModel)]="query" placeholder="Consulta de búsqueda">
+    <button (click)="searchImages()" class="container-button">
+      <div class="gallery-view-button">
+        <a routerLink="/image-search">
+        <button class="btn" type="button" >
+          <strong>Buscar</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+        
+          <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </button>
+      </a>
+      </div>
+    </button>
+   <!-- 
+    <button (click)="searchImages()">Search Images</button> -->
+</div>
   <div class="image-gallery">
-    <div *ngIf="images">
+    <div *ngIf="images" class="images-wrapper">
       <div *ngFor="let image of images">
         <img [src]="image.links[0].href" alt="{{ image.data[0].title }}">
       </div>
     </div>
-  </div>
+</div>
   

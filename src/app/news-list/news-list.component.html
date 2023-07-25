@@ -1,5 +1,5 @@
 <div *ngIf="newsArticles">
-    <h2>Spaceflight News</h2>
+    <h2>Noticias Espaciales</h2>
     <ul>
       <li *ngFor="let article of newsArticles">
         <a [routerLink]="['/news', article.id]">
@@ -10,4 +10,20 @@
       </li>
     </ul>
   </div>
+  <div class="gallery-view-button">
+    <a routerLink="/image-search">
+    <button class="btn" type="button">
+      <strong>Imagenes</strong>
+      <div id="container-stars">
+        <div id="stars"></div>
+      </div>
+    
+      <div id="glow">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </button>
+  </a>
+  </div>
+  
   

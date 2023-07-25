@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { ImageSearchComponent } from './image-search/image-search.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/news', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: 'news', component: NewsListComponent },
   { path: 'news/:id', component: NewsDetailComponent },
   { path: 'image-search', component: ImageSearchComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
     AppComponent,
     NewsListComponent,
     NewsDetailComponent,
-    ImageSearchComponent
+    ImageSearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

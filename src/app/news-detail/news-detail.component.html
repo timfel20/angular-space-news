@@ -1,0 +1,8 @@
+<div *ngIf="newsArticle">
+    <h2>{{ newsArticle.title }}</h2>
+    <p>{{ newsArticle.publishedAt | date }}</p>
+    <p>{{ newsArticle.summary }}</p>
+    <p>{{ newsArticle.newsSite }}</p>
+    <a href="{{ newsArticle.url }}" target="_blank">Read more</a>
+  </div>
+  

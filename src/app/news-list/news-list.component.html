@@ -1,0 +1,13 @@
+<div *ngIf="newsArticles">
+    <h2>Spaceflight News</h2>
+    <ul>
+      <li *ngFor="let article of newsArticles">
+        <a [routerLink]="['/news', article.id]">
+          <h3>{{ article.title }}</h3>
+        </a>
+        <p>{{ article.publishedAt | date }}</p>
+        <p>{{ article.summary }}</p>
+      </li>
+    </ul>
+  </div>
+  

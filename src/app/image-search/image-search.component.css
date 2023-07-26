@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .image-gallery img {
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   /* button */
@@ -196,6 +197,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .container-button{
     z-index: 999;
@@ -211,4 +213,23 @@
     color: grey;
     font-size: 15px;
 
+  }
+  .image-item{
+    max-width: 439px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .image-description{
+    text-align: center;
+    font-size: 12px;
+    width: 220px;
+  }
+
+  @media screen and (max-width: 768px) {
+  /*   .image-description{
+   
+      width: 200px;
+    } */
   }

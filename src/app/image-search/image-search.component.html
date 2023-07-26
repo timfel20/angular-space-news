@@ -18,14 +18,16 @@
       </a>
       </div>
     </button>
-   <!-- 
-    <button (click)="searchImages()">Search Images</button> -->
 </div>
-  <div class="image-gallery">
-    <div *ngIf="images" class="images-wrapper">
-      <div *ngFor="let image of images">
+<div class="image-gallery">
+  <div *ngIf="images" class="images-wrapper">
+    <div *ngFor="let image of images">
+      <div class="image-item">
         <img [src]="image.links[0].href" alt="{{ image.data[0].title }}">
+        <p class="image-description">{{ image.data[0].title }}</p>
+        <p><strong>Date:</strong> {{ image.data[0].date }}</p>
+         <!--  <p>{{ image.data[0].description }}</p> -->      
       </div>
     </div>
+  </div>
 </div>
-  
